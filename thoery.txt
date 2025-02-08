@@ -1,0 +1,10 @@
+root directory
+- index.html - entery file of application
+- main.jsx - entery file of js
+- pakage.json - dependeces of pakcege
+-vit.config.js
+
+
+app.jsx- entery file of component
+npm run dev == vite
+jsx- javascript syntax extenstion
