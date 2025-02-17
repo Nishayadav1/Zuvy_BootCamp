@@ -1,0 +1,140 @@
+/* TodoApp.css */
+
+/* General Styles */
+body {
+  font-family: 'Arial, sans-serif';
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Form Styles */
+.form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.form input:focus {
+  border-color: #007bff;
+}
+
+.form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #0056b3;
+}
+
+/* Todo Sections */
+.todo-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.incomplete-tasks,
+.complete-tasks {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.incomplete-tasks h2,
+.complete-tasks h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.incomplete-tasks p,
+.complete-tasks p {
+  color: #888;
+  text-align: center;
+}
+
+/* Todo Item Styles */
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.todo-item:last-child {
+  border-bottom: none;
+}
+
+.todo-item span {
+  flex: 1;
+  font-size: 16px;
+  color: #333;
+}
+
+.todo-item span.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.todo-item button {
+  padding: 5px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.todo-item .toggle-button {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.todo-item .toggle-button:hover {
+  background-color: #218838;
+}
+
+.todo-item .remove-button {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.todo-item .remove-button:hover {
+  background-color: #c82333;
+}
