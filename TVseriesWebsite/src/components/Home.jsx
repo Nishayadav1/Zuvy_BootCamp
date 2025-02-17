@@ -1,5 +1,5 @@
 // src/Homepage.js
-import React, { useState } from "react";
+import { useState } from "react";
 import {tvSeries} from './Data'
 import "./Home.css";
 
