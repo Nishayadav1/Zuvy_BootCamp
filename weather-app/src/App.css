@@ -1,0 +1,181 @@
+/* App.css */
+
+body {
+  font-family: 'Poppins', sans-serif; /* Modern font */
+  background-image: url('https://i.pinimg.com/originals/85/db/41/85db411e5bebff00b8a21f6d29d8c394.gif');
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+h1{
+  color: rgb(10, 66, 104);
+  font-weight: bolder;
+  text-shadow: 2px 2px #12a79f;
+  text-align: center;
+}
+.container {
+  background-image: url('https://www.gifcen.com/wp-content/uploads/2021/12/night-sky-gif-9.gif');
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the background image */
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+  padding: 25px;
+  width: 500px;
+  text-align: center;
+  position: relative; /* Needed for the overlay */
+  overflow: hidden; /* Ensures the border-radius clips the content */
+}
+
+/* Add an overlay for the frosted glass effect */
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent white overlay */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  z-index: 1; /* Places the overlay above the background image */
+  border-radius: 20px; /* Matches the container's border-radius */
+}
+
+/* Ensure content is above the overlay */
+.container > * {
+  position: relative;
+  z-index: 2;
+}
+
+.search-box {
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  width: 90%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-box input:focus {
+  border-color: #2575fc; 
+}
+
+.suggestions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  max-height: 150px;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+.suggestions li {
+  padding: 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #e2dddd;
+  transition: background-color 0.3s ease;
+}
+
+.suggestions li:last-child {
+  border-bottom: none;
+}
+
+.suggestions li:hover {
+  background-color: #f0f2f5;
+}
+
+.weather-card {
+  margin-top: 20px;
+  animation: fadeIn 0.5s ease; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.weather-card h2 {
+  margin: 0;
+  font-size:35px;
+  color: #141313;
+  font-weight: 600;
+}
+
+.weather-card h3 {
+  margin: 5px 0;
+  font-size: 28px;
+  color: #666;
+}
+
+.weather-card h1 {
+  margin: 20px 0;
+  font-size: 56px;
+  color: #333;
+  font-weight: 700;
+}
+
+.weather-card p {
+  margin: 5px 0;
+  font-size: 20px;
+  color: #1d3c92;
+  font-weight: bolder;
+}
+
+.weather-details {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  background-color: rgba(245, 245, 245, 0.8); /* Light background */
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.weather-details div {
+  text-align: center;
+}
+
+.weather-details p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #312f2f;
+}
+
+.weather-details p:first-child {
+  font-weight: 600;
+  color: #2575fc; /* Highlight key data */
+}
+
+.loading, .error {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #666;
+}
+
+.error {
+  color: #ff6b6b;
+}
+
+/* Add a subtle hover effect on the weather card */
+.weather-card:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
