@@ -1,23 +1,18 @@
-const expenseReducer = (state, action) => {
-  switch (action.type) {
-    case 'ADD_EXPENSE':
-      return {
-        ...state,
-        expenses: [...state.expenses, action.payload],
-      };
-    case 'DELETE_EXPENSE':
-      return {
-        ...state,
-        expenses: state.expenses.filter((expense) => expense.id !== action.payload),
-      };
-    case 'UPDATE_EXPENSE':
-      return {
-        ...state,
-        expenses: state.expenses.map((expense) =>
-          expense.id === action.payload.id ? { ...expense, ...action.payload } : expense
-        ),
-      };
-    default:
-      return state;
-  }
-};
+import { useReducer } from "react";
+import { cartReducer } from "./context/cartReducer";
+import ProductList from "./components/ProductList";
+import Cart from "./components/Cart";
+
+function App() {
+    const [cart, dispatch] = useReducer(cartReducer, []);
+
+    return (
+        <div className="App">
+            <h1>Shopping Cart</h1>
+            <ProductList dispatch={dispatch} />
+            <Cart cart={cart} dispatch={dispatch} />
+        </div>
+    );
+}
+
+export default App;
