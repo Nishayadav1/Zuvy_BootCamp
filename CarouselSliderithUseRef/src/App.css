@@ -1,54 +1,44 @@
-body{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: black;
-
-}
-h1{
-  color:white;
-  text-decoration: underline;
-}
 .carousel-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   position: relative;
-  width: 400px;
-  margin: auto;
-  /* border:2px solid; */
 }
 
-.carousel {
-  display: flex;
-  overflow-x: auto;  
-  scroll-behavior: smooth;
-  width: 300px;
-  white-space: nowrap;
-}
-
-.carousel img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-}
-
-.carousel-btn {
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
+.carousel-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
+  background: white;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 5px 10px;
 }
 
-.left {
-  left: 0;
+.carousel-button.left {
+  left: 10px;
 }
 
-.right {
-  right: 0;
+.carousel-button.right {
+  right: 10px;
+}
+
+.carousel-track {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  width: 600px; 
+  gap: 10px;
+  margin: 10px auto;
+  padding: 0 100px; 
+  border: 1px solid #ccc;
+  white-space: nowrap;
+  position: relative;
+}
+
+.carousel-track img {
+  width: 300px;
+  height: 200px;
+  flex-shrink: 0;
+  border-radius: 10px;
 }
